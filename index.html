@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dimple — Full Stack Developer & Computer Science Student. Professional portfolio showcasing projects, skills, and achievements." />
+  <meta name="keywords" content="Dimple, Full Stack Developer, Web Developer, Portfolio, Computer Science" />
+  <meta name="author" content="Dimple" />
+  <meta property="og:title" content="Dimple | Full Stack Developer" />
+  <meta property="og:description" content="Professional portfolio of Dimple — Full Stack Developer & CS Student." />
+  <meta property="og:type" content="website" />
+
+  <title>Dimple | Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ─── Scroll Progress ─────────────────── -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ─── Navigation ─────────────────────── -->
+  <header>
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="Home">BS.</a>
+
+        <ul class="nav-links" id="nav-links" role="menubar">
+          <li role="none"><a href="#hero"         class="nav-link" data-section="hero"         role="menuitem">Home</a></li>
+          <li role="none"><a href="#about"        class="nav-link" data-section="about"        role="menuitem">About</a></li>
+          <li role="none"><a href="#skills"       class="nav-link" data-section="skills"       role="menuitem">Skills</a></li>
+          <li role="none"><a href="#projects"     class="nav-link" data-section="projects"     role="menuitem">Projects</a></li>
+          <li role="none"><a href="#achievements" class="nav-link" data-section="achievements" role="menuitem">Achievements</a></li>
+          <li role="none"><a href="#education"    class="nav-link" data-section="education"    role="menuitem">Education</a></li>
+          <li role="none"><a href="#contact"      class="nav-link" data-section="contact"      role="menuitem">Contact</a></li>
+          <li role="none">
+            <a href="assets/resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener" aria-label="Download Resume">
+              <i class="fa-solid fa-file-arrow-down"></i> Resume
+            </a>
+          </li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════ -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-bg"></div>
+      <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+      <!-- Floating background blobs -->
+      <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+      <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+      <div class="bg-shape bg-shape-3" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+        <!-- Left Content -->
+        <div class="hero-left">
+          <div class="hero-greeting">
+            <span class="hero-wave" aria-hidden="true">👋</span>
+            <span class="hero-greeting-text">Welcome to my Portfolio</span>
+          </div>
+
+          <h1 class="hero-name">
+            I'm <span class="gradient-text">Dimple</span>
+          </h1>
+
+          <p class="hero-roles" aria-live="polite">
+            <span id="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span>
+          </p>
+
+          <p class="hero-desc">
+            I enjoy building innovative software solutions and continuously learning modern technologies.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary shimmer-btn" id="hero-view-projects">
+              <i class="fa-solid fa-rocket"></i>
+              View Projects
+            </a>
+            <a href="assets/resume.jpg" class="btn-secondary" download id="hero-download-resume">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              Download Resume
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="hero-socials-label">Find me on:</span>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="btn-icon" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dimple-253413395/" target="_blank" rel="noopener" class="btn-icon" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:Dimplesindare@gmail.com" class="btn-icon" aria-label="Send Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" class="btn-icon" aria-label="Twitter Profile">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right — Profile Photo -->
+        <div class="hero-right">
+          <div class="hero-photo-wrapper rounded-card-gradient">
+            <div class="hero-photo-glow" aria-hidden="true"></div>
+            <img
+              src="assets/profile.jpg"
+              alt="Dimple — AI & ML Student"
+              class="hero-photo-img"
+              width="360"
+              height="360"
+            />
+            <div class="hero-badge" aria-label="Currently available for opportunities">
+              <span class="hero-badge-dot"></span>
+              <span class="hero-badge-icon" aria-hidden="true">💼</span>
+              Open to Opportunities
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-indicator-text">Scroll Down</span>
+        <div class="scroll-indicator-mouse">
+          <div class="scroll-indicator-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         ABOUT SECTION
+    ════════════════════════════════════════ -->
+    <section id="about" aria-label="About Me">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Left — Text -->
+          <div class="about-left reveal reveal-left">
+            <div class="section-tag"><i class="fa-solid fa-user"></i> About Me</div>
+            <h2 class="section-title">Crafting Digital<br><span class="gradient-text">Experiences</span></h2>
+
+            <p class="about-text">
+              Hi, I'm <strong>Dimple</strong>, a second-year B.Tech student specializing in Artificial Intelligence and Machine Learning.
+            </p>
+            <p class="about-text">
+              I'm passionate about technology, problem-solving, and building innovative software solutions.
+            </p>
+            <p class="about-text">
+              I enjoy learning new technologies, working on real-world projects, and continuously improving my skills in AI, Machine Learning, and software development.
+            </p>
+
+            <div class="about-photo-wrapper rounded-card-gradient" style="margin-top: 2rem; max-width: 200px;">
+              <img src="assets/profile.jpg" alt="Dimple" style="border-radius: 50%; border: 4px solid var(--bg-primary); width: 100%;">
+            </div>
+          </div>
+
+          <!-- Right — Info Cards -->
+          <div class="about-right stagger-children">
+            <div class="about-info-card">
+              <div class="about-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div>
+                <div class="about-card-label">Education</div>
+                <div class="about-card-value">B.Tech (AI & ML)</div>
+              </div>
+            </div>
+
+            <div class="about-info-card">
+              <div class="about-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="about-card-label">Location</div>
+                <div class="about-card-value">Indore, Madhya Pradesh</div>
+              </div>
+            </div>
+
+            <div class="about-info-card">
+              <div class="about-card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+              <div>
+                <div class="about-card-label">Status</div>
+                <div class="about-card-value">Second-Year Student</div>
+              </div>
+            </div>
+
+            <div class="about-info-card">
+              <div class="about-card-icon"><i class="fa-solid fa-star"></i></div>
+              <div>
+                <div class="about-card-label">Interests</div>
+                <div class="about-card-value">Artificial Intelligence<br>Machine Learning<br>Software Development</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         SKILLS SECTION
+    ════════════════════════════════════════ -->
+    <section id="skills" aria-label="Technical Skills">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <div class="section-tag"><i class="fa-solid fa-code"></i> Skills</div>
+          <h2 class="section-title">Technical <span class="gradient-text">Expertise</span></h2>
+          <p class="section-subtitle">A curated overview of the technologies and tools I work with to build modern, scalable applications.</p>
+        </div>
+
+        <div class="skills-grid stagger-children">
+
+          <!-- Programming Languages -->
+          <div class="skill-card" aria-label="Programming Languages Skills">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-solid fa-code"></i></div>
+              <h3 class="skill-card-title">Programming Languages</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item" aria-label="C skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">C</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="85" data-delay="0"></div>
+                </div>
+              </div>
+              <div class="skill-item" aria-label="C++ skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">C++</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="80" data-delay="80"></div>
+                </div>
+              </div>
+              <div class="skill-item" aria-label="Python skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="90" data-delay="160"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-card" aria-label="Database Skills">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-solid fa-database"></i></div>
+              <h3 class="skill-card-title">Database</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item" aria-label="MySQL skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">MySQL</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="85" data-delay="0"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI -->
+          <div class="skill-card" aria-label="AI Skills">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3 class="skill-card-title">AI</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item" aria-label="Artificial Intelligence skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">Artificial Intelligence</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="88" data-delay="0"></div>
+                </div>
+              </div>
+              <div class="skill-item" aria-label="Machine Learning skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">Machine Learning</span>
+                  <span class="skill-percent">82%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="82" data-delay="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card" aria-label="Tools">
+            <div class="skill-card-header">
+              <div class="skill-card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h3 class="skill-card-title">Tools</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item" aria-label="Git skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">Git</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="85" data-delay="0"></div>
+                </div>
+              </div>
+              <div class="skill-item" aria-label="GitHub skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">GitHub</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="90" data-delay="80"></div>
+                </div>
+              </div>
+              <div class="skill-item" aria-label="VS Code skill">
+                <div class="skill-item-label">
+                  <span class="skill-name">VS Code</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-width="95" data-delay="160"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS SECTION
+    ════════════════════════════════════════ -->
+    <section id="projects" aria-label="Projects">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <div class="section-tag"><i class="fa-solid fa-rocket"></i> Projects</div>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">A selection of projects I've built — from full-stack web applications to utility tools and more.</p>
+        </div>
+
+        <div class="projects-grid stagger-children">
+
+          <!-- Project 1 -->
+          <article class="project-card" aria-label="ShopSphere E-Commerce Platform project">
+            <div class="project-image-wrapper">
+              <img src="images/projects/project1.jpg" alt="ShopSphere E-Commerce Platform screenshot" loading="lazy" />
+              <div class="project-overlay"></div>
+              <div class="project-number">01</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">ShopSphere — E-Commerce Platform</h3>
+              <p class="project-desc">A full-featured online shopping platform with product listing, cart management, user authentication, and an admin dashboard for inventory control.</p>
+              <div class="project-tags">
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">HTML/CSS</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noopener" class="project-btn project-btn-primary" aria-label="View ShopSphere on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="project-btn project-btn-secondary" aria-label="View ShopSphere live demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" aria-label="TaskFlow project management app project">
+            <div class="project-image-wrapper">
+              <img src="images/projects/project2.jpg" alt="TaskFlow project management application screenshot" loading="lazy" />
+              <div class="project-overlay"></div>
+              <div class="project-number">02</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">TaskFlow — Project Management App</h3>
+              <p class="project-desc">A Kanban-style task management tool with drag-and-drop boards, priority labels, deadline tracking, and team collaboration features.</p>
+              <div class="project-tags">
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">SQLite</span>
+                <span class="tech-badge">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noopener" class="project-btn project-btn-primary" aria-label="View TaskFlow on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="project-btn project-btn-secondary" aria-label="View TaskFlow live demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" aria-label="SkyView weather application project">
+            <div class="project-image-wrapper">
+              <img src="images/projects/project3.jpg" alt="SkyView weather application screenshot" loading="lazy" />
+              <div class="project-overlay"></div>
+              <div class="project-number">03</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">SkyView — Weather Application</h3>
+              <p class="project-desc">A responsive weather dashboard consuming OpenWeatherMap API, displaying real-time conditions, 7-day forecasts, and animated weather icons.</p>
+              <div class="project-tags">
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">REST API</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noopener" class="project-btn project-btn-primary" aria-label="View SkyView on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="project-btn project-btn-secondary" aria-label="View SkyView live demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" aria-label="ConnectHub real-time chat application project">
+            <div class="project-image-wrapper">
+              <img src="images/projects/project4.jpg" alt="ConnectHub real-time chat application screenshot" loading="lazy" />
+              <div class="project-overlay"></div>
+              <div class="project-number">04</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">ConnectHub — Real-Time Chat App</h3>
+              <p class="project-desc">A real-time messaging application with private and group chats, online presence indicators, message history, and user profile management.</p>
+              <div class="project-tags">
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">WebSocket</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noopener" class="project-btn project-btn-primary" aria-label="View ConnectHub on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="project-btn project-btn-secondary" aria-label="View ConnectHub live demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" aria-label="EduTrack student management portal project">
+            <div class="project-image-wrapper">
+              <img src="images/projects/project5.jpg" alt="EduTrack student management system screenshot" loading="lazy" />
+              <div class="project-overlay"></div>
+              <div class="project-number">05</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">EduTrack — Student Management Portal</h3>
+              <p class="project-desc">A comprehensive student information system managing attendance, grades, course enrollment, and faculty communication for educational institutions.</p>
+              <div class="project-tags">
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">HTML/CSS</span>
+                <span class="tech-badge">Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noopener" class="project-btn project-btn-primary" aria-label="View EduTrack on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="project-btn project-btn-secondary" aria-label="View EduTrack live demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card" aria-label="Portfolio website project">
+            <div class="project-image-wrapper">
+              <img src="images/projects/project6.jpg" alt="Personal portfolio website screenshot" loading="lazy" />
+              <div class="project-overlay"></div>
+              <div class="project-number">06</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">DevPortfolio — This Website</h3>
+              <p class="project-desc">A premium personal portfolio website built with pure HTML5, CSS3, and Vanilla JavaScript featuring particle animations, scroll reveals, and glassmorphism design.</p>
+              <div class="project-tags">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Canvas API</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/" target="_blank" rel="noopener" class="project-btn project-btn-primary" aria-label="View portfolio source on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#hero" class="project-btn project-btn-secondary" aria-label="You are viewing the live site">
+                  <i class="fa-solid fa-eye"></i> Live Site
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         ACHIEVEMENTS SECTION
+    ════════════════════════════════════════ -->
+    <section id="achievements" aria-label="Achievements and Certificates">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <div class="section-tag"><i class="fa-solid fa-trophy"></i> Achievements</div>
+          <h2 class="section-title">Certificates & <span class="gradient-text">Achievements</span></h2>
+          <p class="section-subtitle">Recognition and credentials that reflect my continuous learning and dedication to growth.</p>
+        </div>
+
+        <div class="achievements-grid stagger-children">
+
+          <div class="achievement-card" aria-label="NPTEL Elite Certification" style="flex-direction: column; text-align: center; max-width: 400px; margin: 0 auto; display: block;">
+            <img src="images/certificates/nptel_certificate.jpeg" alt="NPTEL Certificate" style="width: 100%; border-radius: var(--border-radius-sm); margin-bottom: 1rem;">
+            <div class="achievement-content" style="width: 100%;">
+              <h3 class="achievement-title">NPTEL Elite Certification</h3>
+              <p class="achievement-org">Course: The Joy of Computing using Python</p>
+              <p class="achievement-year">Score: 91%</p>
+              <p class="achievement-year">Issued By: NPTEL (IIT Madras)</p>
+              <p class="achievement-year">Duration: Jan–Apr 2026</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         EDUCATION SECTION
+    ════════════════════════════════════════ -->
+    <section id="education" aria-label="Education">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Education</div>
+          <h2 class="section-title">Academic <span class="gradient-text">Journey</span></h2>
+          <p class="section-subtitle">My educational background that has shaped my technical foundation and analytical thinking.</p>
+        </div>
+
+        <div class="timeline" role="list">
+
+          <!-- Degree -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-degree">Bachelor of Technology</h3>
+                  <p class="timeline-institution">Artificial Intelligence & Machine Learning</p>
+                  <p class="timeline-institution">Acropolis Institute of Technology and Research</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-duration"><i class="fa-solid fa-location-dot"></i> Indore, Madhya Pradesh</span>
+                  <div class="timeline-score">Status: <span>Currently Pursuing</span></div>
+                </div>
+              </div>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+                Currently pursuing a B.Tech degree specializing in Artificial Intelligence and Machine Learning, with a strong focus on advanced programming, data structures, algorithms, and modern software development practices.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         CONTACT SECTION
+    ════════════════════════════════════════ -->
+    <section id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <div class="section-tag"><i class="fa-solid fa-envelope"></i> Contact</div>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Have a project in mind or want to connect? I'd love to hear from you. Let's build something great together.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper reveal reveal-left">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-subtitle">Fill out the form and I'll get back to you within 24 hours.</p>
+
+            <form id="contact-form" novalidate aria-label="Contact form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="contact-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="John Doe"
+                    required
+                    autocomplete="name"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email Address</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="john@example.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group full">
+                  <label for="contact-subject">Subject</label>
+                  <input
+                    type="text"
+                    id="contact-subject"
+                    name="subject"
+                    placeholder="Project Inquiry / Collaboration / Opportunity"
+                    required
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group full">
+                  <label for="contact-message">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder="Tell me about your project, idea, or opportunity..."
+                    required
+                    aria-required="true"
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="form-submit" id="form-submit-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span class="btn-text">Send Message</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info Card -->
+          <div class="contact-info-card reveal reveal-right">
+            <h3 class="contact-info-title">Contact Info</h3>
+            <p class="contact-info-subtitle">Prefer a direct line? Reach me through any of these channels.</p>
+
+            <div class="contact-info-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value"><a href="mailto:Dimplesindare@gmail.com" style="color: inherit; text-decoration: none;">Dimplesindare@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-item-icon" style="background:rgba(139,92,246,0.12);color:#a78bfa"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="contact-item-label">Location</div>
+                <div class="contact-item-value">Indore, Madhya Pradesh</div>
+              </div>
+            </div>
+
+            <div class="contact-social-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="contact-social-link" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/dimple-253413395/" target="_blank" rel="noopener" class="contact-social-link" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i> Dimple .
+              </a>
+            </div>
+
+            <!-- Availability note -->
+            <div style="margin-top:1rem; padding:1rem; border-radius:10px; background:rgba(34,197,94,0.08); border:1px solid rgba(34,197,94,0.2); display:flex; align-items:center; gap:0.75rem;">
+              <span style="width:10px;height:10px;background:#22c55e;border-radius:50%;flex-shrink:0;animation:pulse-dot 2s ease-in-out infinite;"></span>
+              <p style="font-size:0.875rem; color:var(--text-secondary);">Currently <strong style="color:#4ade80;">available</strong> for internships, freelance work, and full-time roles.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-col">
+          <div class="footer-brand-logo">D.</div>
+          <p class="footer-brand-desc">
+            Artificial Intelligence & Machine Learning Student passionate about building intelligent solutions.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dimple-253413395/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="mailto:Dimplesindare@gmail.com" class="footer-social-link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero"         class="footer-link"><i class="fa-solid fa-chevron-right fa-xs"></i> Home</a></li>
+            <li><a href="#about"        class="footer-link"><i class="fa-solid fa-chevron-right fa-xs"></i> About</a></li>
+            <li><a href="#skills"       class="footer-link"><i class="fa-solid fa-chevron-right fa-xs"></i> Skills</a></li>
+            <li><a href="#projects"     class="footer-link"><i class="fa-solid fa-chevron-right fa-xs"></i> Projects</a></li>
+            <li><a href="#achievements" class="footer-link"><i class="fa-solid fa-chevron-right fa-xs"></i> Achievements</a></li>
+            <li><a href="#education"    class="footer-link"><i class="fa-solid fa-chevron-right fa-xs"></i> Education</a></li>
+            <li><a href="#contact"      class="footer-link"><i class="fa-solid fa-chevron-right fa-xs"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:Dimplesindare@gmail.com" class="footer-link">
+                <i class="fa-solid fa-envelope"></i> Dimplesindare@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+919876543210" class="footer-link">
+                <i class="fa-solid fa-phone"></i> +91 98765 43210
+              </a>
+            </li>
+            <li>
+              <span class="footer-link" style="cursor:default">
+                <i class="fa-solid fa-location-dot"></i> Maharashtra, India
+              </span>
+            </li>
+            <li>
+              <a href="assets/resume.pdf" class="footer-link" download>
+                <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © <span id="footer-year">2025</span> <span>Dimple</span>. Crafted with ❤️ using HTML, CSS & JavaScript.
+        </p>
+        <p class="footer-copyright" style="font-size:0.8rem; opacity:0.6;">
+          Designed & Developed by Dimple
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ─── Back-to-top ──────────────────────── -->
+  <button id="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ─── Toast (dynamically created by JS) ── -->
+
+  <!-- ─── Scripts ──────────────────────────── -->
+  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    // Set footer year dynamically
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+
+
