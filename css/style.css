@@ -1129,7 +1129,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   gap: 1rem;
 }
 
