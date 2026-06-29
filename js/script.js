@@ -188,8 +188,9 @@ function initTypingEffect() {
   if (!el) return;
 
   const roles = [
-    'Artificial Intelligence & Machine Learning Student',
-    'Problem Solver',
+    'AI & Machine Learning Student',
+    'Aspiring AI Engineer',
+    'Problem Solver & Innovator',
     'Software Developer'
   ];
 

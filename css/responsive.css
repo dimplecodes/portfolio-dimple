@@ -17,13 +17,8 @@
   }
 
   .hero-photo-wrapper {
-    width: 300px;
-    height: 300px;
-  }
-
-  .hero-badge {
-    right: -12px;
-    bottom: 12px;
+    width: 340px;
+    height: 340px;
   }
 
   .about-grid {
@@ -100,6 +95,7 @@
     gap: 3rem;
   }
 
+  .hero-status-pill { margin: 0 auto 1.5rem; }
   .hero-greeting { justify-content: center; }
   .hero-desc { margin: 0 auto 2rem; }
   .hero-actions { justify-content: center; }
@@ -108,16 +104,9 @@
   .hero-right { order: -1; }
 
   .hero-photo-wrapper {
-    width: 240px;
-    height: 240px;
+    width: 260px;
+    height: 260px;
     margin: 0 auto;
-  }
-
-  .hero-badge {
-    right: -8px;
-    bottom: 8px;
-    font-size: 0.75rem;
-    padding: 0.6rem 0.85rem;
   }
 
   /* About */
